@@ -1,8 +1,47 @@
 -if @event
-
+	
+	div.row
+		div class=["large-12", "columns"]
+			img src="#{@event.image}" width="100%"
 	h1= @event.name
+	div.row
+		div class=["large-9", "columns"]
+			article
+				h5.title Acerca de
+				div #{@event.description}
+				p
+				h5
+					strong PRECIOS:
+					- @event.tickets.each do |ticket|
+  					    == slim :ticket_info, locals: { ticket: ticket }
+					     
+					
 
-	h3= @event.description
+		div class=["large-3", "columns", "side-bar"]
+			a class=["button small orange large-12"] href="/event/new-booking/#{@event.id}" Reserva!
+			hr
+			div
+				i class=["fa", "fa-calendar-o", "mr-10"]
+				span.title-right CUÁNDO
+				div #{@event.date}
+			div 
+				i class=["fa", "fa-map-marker", "mr-10"]				
+				span.title-right DÓNDE
+				div.title-right #{@event.place}
+				div #{@event.city}
+			hr
+			div
+				div.title-right CONTACTO
 
-	a href="/event/new-booking/#{@event.id}" Reserva!
+				div
+					i class=["fa", "mr-10", "fa-envelope-o"]
+					span F@revistamarvin.com
+                
+                div
+                	i class=["fa", "mr-10", "fa-twitter"]
+                	span @festivalmarvin
+                
+                div
+                	i class=["fa", "mr-10", "fa-facebook"]
+                	span Festival Marvin
 

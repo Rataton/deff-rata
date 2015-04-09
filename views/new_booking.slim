@@ -1,7 +1,10 @@
 -if @event
 
-
 	h1= @event.name
+	div. class=["row", "nav.booking"]
+		div class=["large-4", "columns", "step-done"] 1. Boletos
+		div class=["large-4", "columns", "step-undone"] 2.Forma de pago
+		div class=["large-4", "columns", "step-undone"] 2. Gracias!
 
 	ul.tasks
     - @event.tickets.each do |ticket|

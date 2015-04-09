@@ -1,9 +1,22 @@
-div.row
-  div class=["large-12", "columns"]
-    img src="https://boletia.com/images/landing/boletia-conference.jpg"
+div class=["main-header"]
+	div.inner-head
+		div.header-t1 ¿Eres organizador de eventos?
+		div.header-t2 ¡Con Boletia puedes vender tus eventos en minutos! Es rápido y sencillo.
+		div
+			a class=["large", "button", "orange"] href="/new-event" ¡Crea tu primer evento ahora!
 div.row 
   h1 class=["large-12", "columns"] Eventos destacados del mes
 
-ul.row
+div class=["row", "event-list"]
   - @events.each do |event|
     == slim :event, locals: { event: event }
+
+div.row
+	div class=["large-12", "columns"]
+		div.panel
+			h4 ¿Qué está pasando?
+			div.row
+				div class=["large-9", "columns"]
+					p Nos gusta escuchar de ti y tus increibles sugerencias.
+				div class=["large-3", "columns"]
+					a class=["radius", "button", "right"] href="/contact-us" Contáctanos

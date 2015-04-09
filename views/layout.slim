@@ -2,25 +2,37 @@ doctype html
 html
   head
     meta charset="utf-8"
-    title Boletia!
-    link rel="shortcut icon" href="/favicon.ico"
-    link rel="stylesheet" media="screen, projection" href="css/foundation.css"
-    link rel="stylesheet" media="screen, projection" href="css/normalize.css"
-    link rel="stylesheet" media="screen, projection" href="css/styles.css"
+    title Bienvenido a Boletia
+    link rel="shortcut icon" href="https://pbs.twimg.com/profile_images/443094222929801216/dr3SSif0_400x400.png"  
+    link rel="stylesheet" media="screen, projection" href="/css/foundation.css"
+    link rel="stylesheet" media="screen, projection" href="/css/normalize.css"
+    link rel="stylesheet" media="screen, projection" href="/css/custom.css"
+    link rel="stylesheet" media="screen, projection" href="/css/font-awesome.min.css"
 
-    script  src="js/foundation.min.js"
-    /[if lt IE 9]
-      script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"
+    script  src="/js/jquery-1.11.2.min.js"
+    script  src="/js/foundation.min.js"
+
   body
-    ul.row
-      li class=["large-3 columns"]
-        a href="/"
-          img src="https://boletia.com/assets/interface/header-logo2-a586fd5d40187ae7e4cdb0a52c452f75.png"
-      li class=["large-3 columns"]
-        a href="/" Descubre eventos!
-      li class=["large-3 columns"]
-        a href="/new-event" Crea un nuevo evento!
+    div.menu
+      ul.row
+        li class=["large-3 columns"]
+          a href="/"
+            img src="https://boletia.com/assets/interface/header-logo2-a586fd5d40187ae7e4cdb0a52c452f75.png"
+        li class=["large-3 columns"]
+          a href="/" Descubre eventos!
+        li class=["large-3 columns"]
+          a href="/new-event" Crea un nuevo evento!
+        li class=["large-3 columns"] &nbsp;
 
     == yield
 
-
+    footer.row
+      div class=["large-12", "columns"]
+        hr
+        div.row
+          div class=["large-6", "columns"]
+            p Dev.F Es Complicado, Rataton - GuerraV - RubCuadra
+          div class=["large-6", "columns"]
+            ul class=["inline-list", "right"]
+              li
+                a href="http://www.devf.mx/" Dev.f

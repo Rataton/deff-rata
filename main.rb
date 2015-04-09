@@ -3,6 +3,8 @@ require 'slim'
 require 'data_mapper'
 require "sinatra/reloader" if development?
 
+DataMapper.auto_migrate!
+DataMapper.auto_upgrade!
 DataMapper.setup(:default, ENV['DATABASE_URL'] || "sqlite3://#{Dir.pwd}/development.db")
 
 class Event
@@ -81,15 +83,20 @@ end
 
 get '/event/info/:id' do
   @event = Event.get(params[:id])
+  #@tickets = Ticket.get(event.id)
   slim :event_info
 end
 
 get '/booking/payment/:id' do
-
   @ticket = 
   slim :payment
 end
 
+
+
+get '/contact-us' do
+  slim :contact_us
+end
 
 
 

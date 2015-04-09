@@ -1,17 +1,16 @@
-li class=["large-4", "columns"]
-	figure.picture-holder
-		img src="https://boletia.com/assets/icons/event-placeholder.svg"
-		a href="event/info/#{event.id}"
+div class=["large-4", "columns"]
+	a href="event/info/#{event.id}"
+		img src="#{event.image}"
 	div.event-content
-		span.city #{event.city}
-		h2
+		i.city #{event.city}
+		h4
 			a href="event/info/#{event.id}" #{event.name.capitalize}
 		ul
 			li
-				span class=["icon", "ss-pika", "ssp-calendar"]
+				i class=["fa", "fa-calendar-o", "mr-10"]
 				span #{event.date}
 			li
-				span class=["icon", "ssp-pika", "ssp-location"]
+				i class=["fa", "fa-map-marker", "mr-10"]
 				span #{event.place}
 
-  	a class=["trk-buy", "event-action"] href="event/new-booking/#{event.id}" Comprar boletos
+  	a class=["small", "button"] href="event/new-booking/#{event.id}" Comprar boletos
