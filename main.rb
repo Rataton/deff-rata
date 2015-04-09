@@ -13,6 +13,7 @@ class Event
   property :date,         DateTime
   property :place,        String
   property :city,         String
+  property :image,        String
   property :description,  String
 
   
