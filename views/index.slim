@@ -1,0 +1,3 @@
+ul.event-cards clearfix
+  - @events.each do |event|
+    == slim :event, locals: { event: event }
